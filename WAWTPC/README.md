@@ -1,20 +1,16 @@
+## Preparing the Colab workspace and using it
+1. Once given access, go to **Shared with me** in Google Drive.
+2. Select the ZPS folder and right-click on it.
+3. Select **Organise** → **Add shortcut**.
+4. In the pop-up window select **MyDrive** and confirm.
+5. The first section in each notebook takes care of accessing the ZPS shared folder on the Drive. Later paths are intended to work inside this folder and not anywhere else.
+6. Everything should be working, enjoy!
+
 ## ML model for track reconstruction in WAWTPC detector
 
 This package is used for training a NN for track reconstruction in the
 [WAWTPC](https://indico.cern.ch/event/1104299/contributions/5058543/attachments/2534412/4361430/cwiok_slides_EuNPC2022_v3.pdf) 
 detector.
-
-The package uses TensorFlow and other packages. All the necessary packages are available in a 
-[akalinow/tensorflow-gpu](https://hub.docker.com/r/akalinow/tensorflow-gpu) container. It is best to use singularity to run it:
-
-```Bash
-apptainer run --nv --bind work_dir_on_host:work_dir_in_container docker://akalinow/tensorflow-gpu
-```
-and use a Jupyter available inside the container:
-
-```Bash
-jupyter lab --no-browser --ip=0.0.0.0 --notebook-dir=$HOME
-```
 
 ### The coordinates:
 
