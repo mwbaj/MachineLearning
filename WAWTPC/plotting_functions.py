@@ -74,7 +74,7 @@ def plotEvent(data, model):
         fig.colorbar(im, cax=cax)
         
         plt.subplots_adjust(bottom=0.15, left=0.05, right=0.95, wspace=0.3)
-        plt.savefig("fig_png/event.png", bbox_inches="tight")
+        plt.savefig("drive/MyDrive/ZPS/fig_png/event.png", bbox_inches="tight")
 ###################################################################### 
 ###################################################################### 
 def find_ROIs(img, thr=10, size_thr=0):
@@ -166,7 +166,7 @@ def plotTrainHistory(history):
     axes[1].set_yscale('log')
     
     plt.subplots_adjust(bottom=0.02, left=0.02, right=0.98, hspace=0.5)
-    plt.savefig("fig_png/training_history.png", bbox_inches="tight")
+    plt.savefig("drive/MyDrive/ZPS/fig_png/training_history.png", bbox_inches="tight")
 ###################################################
 ###################################################
 def plotLengthPull(df, partIdx):
@@ -223,7 +223,7 @@ def plotLengthPull(df, partIdx):
     fig.suptitle("particle "+str(partIdx)+" track length resolution")
 
     plt.subplots_adjust(bottom=0.05, left=0.05, right=0.95, hspace=0.3, wspace=0.3) 
-    plt.savefig("fig_png/length_pull_part_"+str(partIdx)+".png", bbox_inches="tight")
+    plt.savefig("drive/MyDrive/ZPS/fig_png/length_pull_part_"+str(partIdx)+".png", bbox_inches="tight")
 ###################################################
 ################################################### 
 def plotLengthPullEvolution(df):
@@ -268,7 +268,7 @@ def plotLengthPullEvolution(df):
         axes[2].plot((x.min(), x.max()), (0,0), color='black')
     
     plt.subplots_adjust(bottom=0.05, left=0.05, right=0.95, hspace=0.5, wspace=0.3) 
-    plt.savefig("fig_png/length_pull_vs_gen.png", bbox_inches="tight")
+    plt.savefig("drive/MyDrive/ZPS/fig_png/length_pull_vs_gen.png", bbox_inches="tight")
 ###################################################
 ###################################################
 def plotEndPointRes(df, edge, partIdx):
@@ -301,7 +301,7 @@ def plotEndPointRes(df, edge, partIdx):
     fig.suptitle("track "+str(partIdx)+" "+edge+" resolution")       
     axes[1,1].set_visible(False)        
     plt.subplots_adjust(bottom=0.05, left=0.05, right=0.95, hspace=0.3, wspace=0.3) 
-    plt.savefig("fig_png/"+edge+"_endpoint_resolution_part_"+str(partIdx)+".png", bbox_inches="tight")          
+    plt.savefig("drive/MyDrive/ZPS/fig_png/"+edge+"_endpoint_resolution_part_"+str(partIdx)+".png", bbox_inches="tight")          
 ###################################################
 ###################################################    
 def controlPlots(df):
@@ -319,7 +319,7 @@ def controlPlots(df):
     axes[1,1].set_visible(False)    
 
     plt.subplots_adjust(bottom=0.05, left=0.05, right=0.95, hspace=0.3, wspace=0.3)  
-    plt.savefig("fig_png/gen_startPos.png", bbox_inches="tight")
+    plt.savefig("drive/MyDrive/ZPS/fig_png/gen_startPos.png", bbox_inches="tight")
     
     fig, axes = plt.subplots(2,2, figsize=(8,8))
     for index, coordName in enumerate(["X", "Y", "Z"]):
@@ -334,7 +334,7 @@ def controlPlots(df):
     axes[1,1].set_visible(False)    
 
     plt.subplots_adjust(bottom=0.05, left=0.05, right=0.95, hspace=0.3, wspace=0.3)   
-    plt.savefig("fig_png/gen_endPos.png", bbox_inches="tight")
+    plt.savefig("drive/MyDrive/ZPS/fig_png/gen_endPos.png", bbox_inches="tight")
 ###################################################
 ###################################################
 def plotOpeningAngleCos(df):
