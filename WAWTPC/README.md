@@ -3,7 +3,7 @@
 2. Select the ZPS folder and right-click on it.
 3. Select **Organise** → **Add shortcut**.
 4. In the pop-up window select **MyDrive** and confirm.
-5. The first section in each notebook takes care of accessing the ZPS shared folder on the Drive. Later paths are intended to work inside this folder and not anywhere else.
+5. The first section in each notebook takes care of accessing the ZPS shared folder on the Drive. All paths are intended to work inside of this folder and not anywhere else.
 6. Everything should be working, enjoy!
 
 ## ML model for track reconstruction in WAWTPC detector
