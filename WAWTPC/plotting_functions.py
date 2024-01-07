@@ -39,8 +39,8 @@ def plotEndpoints(data, iProj, axis, label, color):
         axis.plot(uvwt[3], uvwt[iProj], marker='.', markersize=20, alpha=0.8, color=color)
 ###################################################
 ###################################################
-def plotEvent(data, model, axlim=False):
-    '''axlim: list of lists of lists with axes limits for three plots [[[x1min,x1max],[y1min,y1max]],[[x2min,x2max],[y2min,y2max]],[[x3min,x3max],[y3min,y3max]]]'''
+def plotEvent(data, model):
+
     #data indexing: data[features/label][element in batch][index in features/label]
     projNames = ("U", "V", "W")
     fig, axes = plt.subplots(1,3, figsize=(28,10))
@@ -65,12 +65,8 @@ def plotEvent(data, model, axlim=False):
             plotEndpoints(modelResponse, iProj, axis, color="blue", label="NN")         
         axis.set_xlabel("time bin")
         axis.set_ylabel(projNames[iProj]+" strip")
-        if axlim:
-            axis.set_xlim(axlim[iProj][0][0], axlim[iProj][0][1])
-            axis.set_ylim(axlim[iProj][1][0], axlim[iProj][1][1])
-        else:
-            axis.set_xlim(sx.start-5, sx.stop+5)
-            axis.set_ylim(sy.start-5, sy.stop+5)
+        axis.set_xlim(sx.start-5, sx.stop+5)
+        axis.set_ylim(sy.start-5, sy.stop+5)
         axis.legend()
         
         divider = make_axes_locatable(axis)
