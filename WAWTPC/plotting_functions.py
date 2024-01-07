@@ -40,7 +40,7 @@ def plotEndpoints(data, iProj, axis, label, color):
 ###################################################
 ###################################################
 def plotEvent(data, model, axlim=False):
-    '''axlim: list of lists of lists with axes limits for three plots [[[x1min,x1max],[y1min,y1max]],[[x2min,x2max],[y2min,y2max]],[[x3min,x3max],[y3min,y3max]]]'''
+    '''(optional) axlim: list of lists of lists with axes limits for three plots [[[x0min,x0max],[y0min,y0max]],[[x1min,x1max],[y1min,y1max]],[[x2min,x2max],[y2min,y2max]]]'''
     #data indexing: data[features/label][element in batch][index in features/label]
     projNames = ("U", "V", "W")
     fig, axes = plt.subplots(1,3, figsize=(28,10))
